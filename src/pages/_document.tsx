@@ -5,8 +5,8 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-} from 'next/document';
- 
+} from "next/document";
+
 export default class CustomDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
@@ -15,7 +15,8 @@ export default class CustomDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -37,14 +38,14 @@ export default class CustomDocument extends Document {
       <Html>
         <Head>
           <link
-            href='https://fonts.googleapis.com/css?family=Lato:400,700%7CPoppins:700&display=swap'
-            rel='stylesheet'
+            href="https://fonts.googleapis.com/css?family=Lato:400,700%7CPoppins:700&display=swap"
+            rel="stylesheet"
           ></link>
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script src='https://js.stripe.com/v3/' />
+          <script src="https://js.stripe.com/v3/" />
         </body>
       </Html>
     );
