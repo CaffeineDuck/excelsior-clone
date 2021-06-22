@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import ExcelsiorLogo from "../../../public/assets/excelsior-logo.png";
-import { LogoContainer, LogoText, Wrapper } from "./index.styled";
+import { LogoContainer, LogoText, Wrapper } from "./index.style";
 import Image from 'next/image'
 const NavBar: React.FC = () => {
   return (
