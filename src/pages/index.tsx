@@ -1,15 +1,14 @@
 import * as React from 'react'
-
-interface Props {
-
-}
-
-const Home: React.FC<Props> = ( props ) => {
+import HeroSection from 'src/components/hero'
+import NoLayout from 'src/components/layout/NoLayout'
+ 
+const Home  = () => {
   return (
     <>
-      Helo Boi
+      <HeroSection /> 
     </>
   )
 }
 
+Home.Layout = NoLayout
 export default Home
