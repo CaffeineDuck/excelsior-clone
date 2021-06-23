@@ -5,7 +5,7 @@ import  Head  from "next/head";
 import ExcelsiorLogo from "../../../public/assets/excelsior-logo.png";
 import { LogoContainer, LogoText, Wrapper } from "./index.style";
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <>
       <Head>
