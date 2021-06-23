@@ -1,13 +1,25 @@
 import React from "react";
 
 import About from "./About";
-import { SlideImage, ImageWrapper, MainWrapper, Wave } from "./index.style";
+import {
+  SlideImage,
+  ImageWrapper,
+  MainWrapper,
+  Wave,
+  BlackLayer,
+  HeroText,
+  TextWrapper,
+} from "./index.style";
 
 const HeroSection: React.FC = () => {
   return (
     <>
       <MainWrapper>
         <ImageWrapper>
+          <BlackLayer />
+          <TextWrapper>
+            <HeroText>We strive for excellence in all that we do</HeroText>
+          </TextWrapper>
           <React.Fragment>
             <SlideImage src="assets/hero/0.jpg" animationDelay={0} />
             <SlideImage src="assets/hero/1.jpg" animationDelay={4} />

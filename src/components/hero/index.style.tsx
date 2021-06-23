@@ -62,6 +62,32 @@ export const SlideImage = styled(Figure)`
 export const Wave = styled.img`
   position: absolute;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   margin-bottom: -2px;
+`;
+
+export const BlackLayer = styled.div`
+  position: absolute;
+  background-color: black;
+  opacity: 30%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+`;
+
+export const TextWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`;
+
+export const HeroText = styled.h1`
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+  z-index: 4;
+  max-width: 600px;
+  text-align: center;
 `;
