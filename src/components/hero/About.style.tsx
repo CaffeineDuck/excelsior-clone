@@ -6,8 +6,6 @@ export const UpperWrapper = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  margin-top: 15vh;
-  margin-bottom: 2vh;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -27,7 +25,7 @@ export const AboutHeader = styled.h1`
 `;
 
 export const AboutBody = styled.p`
-  padding-top: 1rem;
+  padding-top: 1vh;
   font-size: 1rem;
   line-height: 1.5rem;
 `;
