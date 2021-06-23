@@ -1,14 +1,17 @@
-import * as React from 'react'
-import HeroSection from 'src/components/hero'
-import NoLayout from 'src/components/layout/NoLayout'
- 
-const Home  = () => {
+import React, { useState } from "react";
+import HeroSection from "src/components/hero";
+import NoLayout from "src/components/layout/NoLayout";
+import NavBar from "src/components/navbar";
+
+const Home = () => {
+  const [transparent, setTransparent] = useState(true);
   return (
     <>
-      <HeroSection /> 
+      <NavBar transparent={transparent} />
+      <HeroSection />
     </>
-  )
-}
+  );
+};
 
-Home.Layout = NoLayout
-export default Home
+Home.Layout = NoLayout;
+export default Home;

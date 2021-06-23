@@ -1,11 +1,15 @@
 import * as React from "react";
 import Image from "next/image";
-import  Head  from "next/head";
+import Head from "next/head";
 
 import ExcelsiorLogo from "../../../public/assets/excelsior-logo.png";
 import { LogoContainer, LogoText, Wrapper } from "./index.style";
 
-const NavBar: React.FC = () => {
+interface Props {
+  transparent?: boolean;
+}
+
+const NavBar: React.FC<Props> = ({ transparent = false }) => {
   return (
     <>
       <Head>
@@ -14,7 +18,7 @@ const NavBar: React.FC = () => {
           rel="stylesheet"
         />
       </Head>
-      <Wrapper>
+      <Wrapper transparent={transparent}>
         <LogoContainer>
           <Image height="55px" width="58px" src={ExcelsiorLogo} />
           <LogoText>The Excelsior School</LogoText>
@@ -24,6 +28,5 @@ const NavBar: React.FC = () => {
     </>
   );
 };
-
 
 export default NavBar;
