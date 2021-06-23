@@ -36,16 +36,10 @@ export default class CustomDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link
-            href="https://fonts.googleapis.com/css?family=Lato:400,700%7CPoppins:700&display=swap"
-            rel="stylesheet"
-          ></link>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
-          <script src="https://js.stripe.com/v3/" />
         </body>
       </Html>
     );
