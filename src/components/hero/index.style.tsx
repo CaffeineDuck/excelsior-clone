@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface FigureProps {
+  animationDelay: number;
+}
+
 export const MainWrapper = styled.div`
   display: grid;
   grid-template-rows: 20fr 10fr;
@@ -13,17 +17,16 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const Figure = styled.figure<{
-  backgroundImage: string;
-  animationDelay: number;
-}>`
+export const Figure = styled.img<FigureProps>`
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: slideShow 24s linear infinite 0s;
+  object-fit: cover;
+  animation: slideShow 16s linear infinite 0s;
 
   @keyframes slideShow {
     0% {
@@ -53,7 +56,12 @@ export const Figure = styled.figure<{
 
 export const SlideImage = styled(Figure)`
   animation-delay: ${(props) => props.animationDelay}s;
-  background: url(${(props) => props.backgroundImage});
-  background-size: cover;
+  z-index: 1;
+`;
+
+export const Wave = styled.img`
   position: absolute;
+  bottom: 0;
+  z-index: 2;
+  margin-bottom: -2px;
 `;
