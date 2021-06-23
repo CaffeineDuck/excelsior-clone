@@ -11,7 +11,7 @@ interface Props {
 
 const NavBar: React.FC<Props> = ({ transparent = false }) => {
   return (
-    <>
+    <nav>
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
@@ -25,7 +25,7 @@ const NavBar: React.FC<Props> = ({ transparent = false }) => {
         </LogoContainer>
         <div>Lol</div>
       </Wrapper>
-    </>
+    </nav>
   );
 };
 
