@@ -90,4 +90,5 @@ export const HeroText = styled.h1`
   z-index: 4;
   max-width: 600px;
   text-align: center;
+  font-family: Questrial,sans-serif;
 `;
