@@ -28,4 +28,5 @@ export const AboutBody = styled.p`
   padding-top: 1vh;
   font-size: 1rem;
   line-height: 1.5rem;
+  font-family: Questrial,sans-serif;
 `;
