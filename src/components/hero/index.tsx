@@ -13,7 +13,7 @@ import {
 
 const HeroSection: React.FC = () => {
   return (
-    <>
+    <section id="hero-section">
       <MainWrapper>
         <ImageWrapper>
           <BlackLayer />
@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
         </ImageWrapper>
         <About />
       </MainWrapper>
-    </>
+    </section>
   );
 };
 

@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import HeroSection from "src/components/hero";
 import NoLayout from "src/components/layout/NoLayout";
 import NavBar from "src/components/navbar";
+import FacilitiesSection from 'src/components/facilities'
 
 const Home = () => {
-  const [transparent, setTransparent] = useState(true);
+
   return (
-    <>
-      <NavBar transparent={transparent} />
+    <div>
+      <NavBar transparent={false}/>
       <HeroSection />
-    </>
+      <FacilitiesSection />
+    </div>
   );
 };
 
