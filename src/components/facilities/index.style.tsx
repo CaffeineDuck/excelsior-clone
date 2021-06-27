@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 94vh;
+  height: 93vh;
   width: 100%;
   background-color: #f4f7f6;
   display: grid;
@@ -24,3 +24,9 @@ export const FacilitiesText = styled.p`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
