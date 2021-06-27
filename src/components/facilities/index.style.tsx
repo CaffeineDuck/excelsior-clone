@@ -6,8 +6,6 @@ export const Wrapper = styled.div`
   background-color: #f4f7f6;
   display: grid;
   grid-template-rows: 1fr 2fr 1fr;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const TextWrapper = styled.div`
