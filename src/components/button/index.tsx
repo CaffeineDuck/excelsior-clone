@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
-interface Props {}
+interface Props {
+  size: "sm" | "md" | "lg";
+}
+
+const ButtonSizes = {
+  sm: ["0.4rem", "0.6rem"],
+  md: ["0.625rem", "1.25rem"],
+  lg: ["1rem", "2.25rem"],
+}
 
 const Button = styled.a<Props>`
   text-decoration: none;
@@ -9,14 +17,19 @@ const Button = styled.a<Props>`
   transition: all 0.3s linear;
   text-align: center;
   color: #232555;
-  padding: 0.625rem 1.25rem;
   cursor: pointer;
+
+  padding-left: ${props => (ButtonSizes[props.size][1])};  
+  padding-right: ${props => (ButtonSizes[props.size][1])};  
+  padding-bottom: ${props => (ButtonSizes[props.size][0])};  
+  padding-top: ${props => (ButtonSizes[props.size][0])};  
 
   &:hover,
   &:focus {
     color: #fff;
     background-color: #232555;
-    font-size: 0.98em;
+    font-size: 1.05em;
+    
   }
 `;
 
