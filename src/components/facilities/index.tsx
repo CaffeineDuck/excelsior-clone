@@ -1,6 +1,10 @@
 import * as React from "react";
+import Link from 'next/link'
+
+import Button from "../button";
 import ActivityCard from "./ActivityCard";
 import {
+  ButtonWrapper,
   FacilitiesHeader,
   FacilitiesText,
   TextWrapper,
@@ -22,6 +26,12 @@ const Facilities: React.FC<Props> = (props) => {
         </TextWrapper>
 
         <ActivityCard />
+
+        <ButtonWrapper>
+          <Link href="/facilities" >
+            <Button>Explore More</Button>
+          </Link>
+        </ButtonWrapper>
       </Wrapper>
     </section>
   );
