@@ -15,9 +15,9 @@ const ActivityCard: React.FC = () => {
   return (
     <Wrapper>
       {activities.map(({ name, src }, index) => (
-        <CardWrapper>
-          <Card key={index} src={src}/>
-          <CardText key={index}>{name}</CardText>
+        <CardWrapper key={index}>
+          <Card src={src} />
+          <CardText>{name}</CardText>
         </CardWrapper>
       ))}
     </Wrapper>
