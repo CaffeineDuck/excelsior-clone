@@ -29,7 +29,7 @@ const Facilities: React.FC<Props> = (props) => {
 
         <ButtonWrapper>
           <Link href="/facilities" >
-            <Button>Explore More</Button>
+            <Button size="md">Explore More</Button>
           </Link>
         </ButtonWrapper>
       </Wrapper>
