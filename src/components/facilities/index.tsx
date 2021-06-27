@@ -1,5 +1,5 @@
 import * as React from "react";
-import Link from 'next/link'
+import Link from "next/link";
 
 import Button from "../button";
 import ActivityCard from "./ActivityCard";
@@ -10,8 +10,11 @@ import {
   TextWrapper,
   Wrapper,
 } from "./index.style";
+import { ActivityProps } from "src/utils/types";
 
-interface Props {}
+interface Props {
+  activities: ActivityProps[];
+}
 
 const Facilities: React.FC<Props> = (props) => {
   return (
@@ -25,10 +28,10 @@ const Facilities: React.FC<Props> = (props) => {
           </FacilitiesText>
         </TextWrapper>
 
-        <ActivityCard />
+        <ActivityCard activities={props.activities} />
 
         <ButtonWrapper>
-          <Link href="/facilities" >
+          <Link href="/facilities">
             <Button size="md">Explore More</Button>
           </Link>
         </ButtonWrapper>

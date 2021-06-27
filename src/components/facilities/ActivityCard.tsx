@@ -1,22 +1,17 @@
 import * as React from "react";
+import { ActivityProps } from "src/utils/types";
 import { Card, CardText, CardWrapper, Wrapper } from "./ActivityCard.style";
 
-const ActivityCard: React.FC = () => {
-  const activities = [
-    { name: "training", src: "assets/facilities/training.jpg" },
-    { name: "swimming", src: "assets/facilities/swimming.jpg" },
-    { name: "football", src: "assets/facilities/football.jpg" },
-    {
-      name: "basketball",
-      src: "assets/facilities/basketball.jpg",
-    },
-  ];
+interface Props {
+  activities: ActivityProps[];
+}
 
+const ActivityCard: React.FC<Props> = ({ activities }) => {
   return (
     <Wrapper>
-      {activities.map(({ name, src }, index) => (
+      {activities.map(({ name, ImageSrc }, index) => (
         <CardWrapper key={index}>
-          <Card src={src} />
+          <Card src={ImageSrc} />
           <CardText>{name}</CardText>
         </CardWrapper>
       ))}

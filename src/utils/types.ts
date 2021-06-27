@@ -5,3 +5,8 @@ export interface EventProps {
   imageSrc: string;
   postLink: string;
 }
+
+export interface ActivityProps {
+  name: string;
+  ImageSrc: string;
+}
