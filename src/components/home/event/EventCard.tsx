@@ -1,7 +1,7 @@
 import Link from "next/link";
 import * as React from "react";
 import { EventProps } from "src/utils/types";
-import Button from "../button";
+import Button from "../../button";
 import {
   EventDate,
   EventDescription,
@@ -10,7 +10,6 @@ import {
   EventWrapper,
   Wrapper,
 } from "./EventCard.style";
-
 
 interface Props {
   events: EventProps[];
@@ -25,7 +24,7 @@ const EventCard: React.FC<Props> = ({ events }) => {
           <EventHeader>{title}</EventHeader>
           <EventDescription>{subtitle}</EventDescription>
           <EventDate>{date}</EventDate>
-          <Link href={postLink}>
+          <Link href={postLink} passHref>
             <Button size="sm" />
           </Link>
         </EventWrapper>

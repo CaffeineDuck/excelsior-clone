@@ -9,7 +9,7 @@ interface Props {
 const ActivityCard: React.FC<Props> = ({ activities }) => {
   return (
     <Wrapper>
-      {activities.map(({ name, ImageSrc }, index) => (
+      {activities.map(({ name, imageSrc: ImageSrc }, index) => (
         <CardWrapper key={index}>
           <Card src={ImageSrc} />
           <CardText>{name}</CardText>

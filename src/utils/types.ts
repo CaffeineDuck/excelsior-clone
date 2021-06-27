@@ -8,5 +8,10 @@ export interface EventProps {
 
 export interface ActivityProps {
   name: string;
-  ImageSrc: string;
+  imageSrc: string;
+}
+
+export interface HeroSlideProps {
+  imageSrc: string;
+  animationDelay: number;
 }

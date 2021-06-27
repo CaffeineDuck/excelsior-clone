@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface FigureProps {
   animationDelay: number;
+  totalAnimationTime: number;
 }
 
 export const MainWrapper = styled.div`
@@ -17,7 +18,10 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const Figure = styled.img<FigureProps>`
+export const SlideImage = styled.img<FigureProps>`
+  animation: slideShow ${(props) => props.totalAnimationTime}s linear infinite
+    ${(props) => props.animationDelay}s;
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +30,6 @@ export const Figure = styled.img<FigureProps>`
   height: 100%;
   opacity: 0;
   object-fit: cover;
-  animation: slideShow 16s linear infinite 0s;
 
   @keyframes slideShow {
     0% {
@@ -52,11 +55,6 @@ export const Figure = styled.img<FigureProps>`
       transform: scale(1);
     }
   }
-`;
-
-export const SlideImage = styled(Figure)`
-  animation-delay: ${(props) => props.animationDelay}s;
-  z-index: 1;
 `;
 
 export const Wave = styled.img`
@@ -90,5 +88,5 @@ export const HeroText = styled.h1`
   z-index: 4;
   max-width: 600px;
   text-align: center;
-  font-family: Questrial,sans-serif;
+  font-family: Questrial, sans-serif;
 `;

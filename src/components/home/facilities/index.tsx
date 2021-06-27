@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 
-import Button from "../button";
+import Button from "../../button";
 import ActivityCard from "./ActivityCard";
 import {
   ButtonWrapper,
@@ -31,7 +31,7 @@ const Facilities: React.FC<Props> = (props) => {
         <ActivityCard activities={props.activities} />
 
         <ButtonWrapper>
-          <Link href="/facilities">
+          <Link href="/facilities" passHref>
             <Button size="md">Explore More</Button>
           </Link>
         </ButtonWrapper>
